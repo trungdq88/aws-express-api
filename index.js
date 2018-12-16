@@ -1,7 +1,8 @@
+require('dotenv').config();
 const serverless = require('serverless-http');
 const bodyParser = require('body-parser');
 const express = require('express');
-var cors = require('cors');
+const cors = require('cors');
 const app = express();
 
 app.use(cors());
@@ -19,7 +20,7 @@ app.post('/', async (req, res) => {
 module.exports.handler = serverless(app);
 
 if (process.env.NODE_ENV === 'local') {
-  app.listen(5294, () => {
-    console.log('Servers started 5294');
+  app.listen(PORT, () => {
+    console.log(`Servers started ${PORT}`);
   });
 }
