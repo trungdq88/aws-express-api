@@ -4,4 +4,4 @@ jspm_packages
 
 # Serverless directories
 .serverless
-# yarn.lock
+yarn.lock
