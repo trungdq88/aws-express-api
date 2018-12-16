@@ -23,24 +23,11 @@ provider:
   name: aws
   runtime: nodejs8.10
 
-
-custom:
-  stage: ${opt:stage, self:provider.stage}
-  environment:
-    SECRET_KEY:
-      dev: "sk_test_G9lsCQLXQM46VRQy02itjIu5"
-      prod: "sk_live_ZcnD8F7KFFLkheUhzWFTSCki"
-    DATABASE:
-      dev: "1riIGiPHhqcqCQz9c02mlNzzPF8nzR5_Hiijd7XYC7YM"
-      prod: "1ccnfofK5BG5FT7zEnMMuM87dYkPrb8y3MrrfuexqmhQ"
-
 functions:
   main:
     handler: index.handler
     events:
       - http: ANY /
-    environment:
-      SECRET_KEY: ${self:custom.environment.SECRET_KEY.${self:custom.stage}}
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
