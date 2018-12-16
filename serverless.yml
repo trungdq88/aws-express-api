@@ -35,7 +35,7 @@ custom:
       prod: "1ccnfofK5BG5FT7zEnMMuM87dYkPrb8y3MrrfuexqmhQ"
 
 functions:
-  hacpay:
+  main:
     handler: index.handler
     events:
       - http: ANY /
