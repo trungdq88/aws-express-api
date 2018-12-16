@@ -20,7 +20,7 @@ app.post('/', async (req, res) => {
 module.exports.handler = serverless(app);
 
 if (process.env.NODE_ENV === 'local') {
-  app.listen(PORT, () => {
-    console.log(`Servers started ${PORT}`);
+  app.listen(process.env.PORT, () => {
+    console.log(`Servers started ${process.env.PORT}`);
   });
 }
