@@ -25,8 +25,8 @@ provider:
 
 custom:
   domain:
-    dev: # TODO: example: app1-dev.thesimpleapi.com
-    prod: # TODO: example: app1.thesimpleapi.com
+    dev: template-dev.thesimpleapi.com # TODO: example: app1-dev.thesimpleapi.com
+    prod: template.thesimpleapi.com # TODO: example: app1.thesimpleapi.com
   customDomain:
     domainName: ${self:custom.domain.${opt:stage}}
     basePath: ''
