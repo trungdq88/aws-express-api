@@ -23,11 +23,24 @@ provider:
   name: aws
   runtime: nodejs8.10
 
+custom:
+  domain:
+    dev: # TODO: example: app1-dev.thesimpleapi.com
+    prod: # TODO: example: app1.thesimpleapi.com
+  customDomain:
+    domainName: ${self:custom.domain.${opt:stage}}
+    basePath: ''
+    stage: ${opt:stage}
+    createRoute53Record: true
+
 functions:
   main:
     handler: index.handler
     events:
-      - http: ANY /
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: true
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
