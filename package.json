@@ -9,8 +9,11 @@
     "serverless-http": "^1.8.0"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "deploy-prod": "sls deploy --stage prod",
     "deploy-dev": "sls deploy --stage dev"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
