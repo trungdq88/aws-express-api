@@ -9,8 +9,8 @@ app.use(cors());
 app.options('*', cors());
 app.use(bodyParser.json());
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
+app.get('/:id', function(req, res) {
+  res.send('Hello World! ' + JSON.stringify(req.params));
 });
 
 app.post('/', async (req, res) => {
