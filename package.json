@@ -11,8 +11,8 @@
   },
   "scripts": {
     "start": "nodemon src/index.js",
-    "deploy-prod": "sls deploy --stage prod",
-    "deploy-dev": "sls deploy --stage dev"
+    "deploy-prod": "sls deploy --stage prod --env production",
+    "deploy-dev": "sls deploy --stage dev --env development"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
