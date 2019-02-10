@@ -5,5 +5,5 @@ jspm_packages
 # Serverless directories
 .serverless
 yarn.lock
-.dev.production
-.dev.development
+.env.production
+.env.development
