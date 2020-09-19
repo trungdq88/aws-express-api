@@ -39,6 +39,6 @@ If you see problem about "region config not found", use the following:
 
 # Demo
 
-https://template-dev.thesimpleapi.com
+https://template-dev.thesimpleapi.com/hello
 
-https://template.thesimpleapi.com
+https://template.thesimpleapi.com/hello
