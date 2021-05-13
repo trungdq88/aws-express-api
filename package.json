@@ -10,7 +10,7 @@
     "serverless-http": "^1.8.0"
   },
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "NODE_ENV=local nodemon src/index.js",
     "deploy-prod": "sls deploy --stage prod --env production",
     "deploy-dev": "sls deploy --stage dev --env development"
   },
